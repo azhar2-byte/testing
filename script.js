@@ -28,3 +28,17 @@ function handleYesClick() {
 function handleletterClick() {
     window.location.href = "letter.html";
 }
+const container = document.getElementById('heart-container');
+
+for (let i = 0; i < 20; i++) {
+  const heart = document.createElement('div');
+  heart.className = 'floating-heart';
+  heart.textContent = '❤';
+
+  heart.style.left = Math.random() * 100 + 'vw';
+  heart.style.top = Math.random() * 100 + 'vh';
+  heart.style.fontSize = 16 + Math.random() * 20 + 'px';
+  heart.style.animationDelay = Math.random() * 5 + 's';
+
+  container.appendChild(heart);
+}
