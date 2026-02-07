@@ -8,10 +8,13 @@ body {
     margin: 0;
     background-color: white;
     font-family: "Nunito", sans-serif;
+    position: relative; 
 }
 
 .container {
     text-align: center;
+    position: relative;
+    z-index: 2; 
 }
 
 .letter {
@@ -47,30 +50,33 @@ body {
         padding: 15px;
     }
 }
+
+
 #heart-container {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1; 
 }
 
 .floating-heart {
-  position: absolute;
-  color: rgba(255, 77, 136, 0.35);
-  animation: floatHeart 6s ease-in-out infinite;
+    position: absolute;
+    color: rgba(255, 77, 136, 0.35);
+    animation: floatHeart 6s ease-in-out infinite;
+    will-change: transform, opacity;
 }
 
 @keyframes floatHeart {
-  0% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
-  50% {
-    transform: translateY(-25px);
-    opacity: 0.4;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 0.8;
-  }
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-25px);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
 }
