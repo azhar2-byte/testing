@@ -10,10 +10,10 @@ body {
     background-color: white;
     font-family: "Nunito", sans-serif;
 }
- .no-button {
+ .letter-button {
     font-size: 1.5em;
     padding: 10px 20px;
-    background-color: #d3d3d3;
+    background-color: pink;
     color: black
     ;
     border: none;
