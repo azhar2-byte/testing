@@ -6,25 +6,28 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: white;
+    background-color: pink;
     font-family: "Nunito", sans-serif;
     flex-direction: column;
-  }
-  
-  .container {
+    position: relative; 
+}
+
+.container {
     text-align: center;
-  }
-  
-  h1 {
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
     font-size: 2.5em;
     color: #d32f2f;
-  }
-  
-  .buttons {
+}
+
+.buttons {
     margin-top: 20px;
-  }
-  
-  .yes-button {
+}
+
+.yes-button {
     font-size: 1.5em;
     padding: 10px 20px;
     margin-right: 10px;
@@ -33,26 +36,56 @@ body {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
+}
 
-  .yes-button:hover{
+.yes-button:hover {
     background-color: #e03777;
-  }
-  
-  .no-button {
+}
+
+.no-button {
     font-size: 1.5em;
     padding: 10px 20px;
     background-color: #d3d3d3;
-    color: black
-    ;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  .gif_container img {
+}
+
+.gif_container img {
     width: 300px;
     height: auto;
     border-radius: 10px;
     margin-top: 20px;
-  }
+}
+
+
+
+#heart-container {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1; 
+}
+
+.floating-heart {
+    position: absolute;
+    color: rgba(255, 77, 136, 0.35);
+    animation: floatHeart 6s ease-in-out infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+    50% {
+        transform: translateY(-25px);
+        opacity: 0.4;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.8;
+    }
+}
