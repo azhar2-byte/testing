@@ -43,7 +43,7 @@ body {
     margin-top: 20px;
 }
 
-/* Mobile friendly */
+
 @media (max-width: 600px) {
     .letter {
         font-size: 0.95rem;
